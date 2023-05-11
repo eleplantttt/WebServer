@@ -25,7 +25,7 @@ WebServer::WebServer(
     HttpConn::srcDir = srcDir_;                             //初始化http连接数量以及资源路径
 
     //初始化数据库连接池实例
-    SqlConnPool::Instance()->Init("localhost", sqlPort, sqlUser, sqlPwd, dbName, connPoolNum);
+    SqlConnPool::Instance()->Init("192.168.160.1", sqlPort, sqlUser, sqlPwd, dbName, connPoolNum);
 
     InitEventMode_(trigMode);                               //初始化事件模式（3为ET，默认为LT）
     if(!InitSocket_()) { isClose_ = true;}                  //初始化socket
