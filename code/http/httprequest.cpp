@@ -179,7 +179,7 @@ bool HttpRequest::UserVerify(const string &name, const string &pwd, bool isLogin
     if(name == "" || pwd == "") { return false; }
     LOG_INFO("Verify name:%s pwd:%s", name.c_str(), pwd.c_str());
     MYSQL* sql;
-    SqlConnRAII(&sql,  SqlConnPool::Instance());
+    SqlConnRAII give_me_a_name(&sql,  SqlConnPool::Instance());
     assert(sql);
     
     bool flag = false;
