@@ -46,8 +46,8 @@ void HeapTimer::add(int id, int timeout, const TimeoutCallBack& cb) {
         /* 新节点：堆尾插入，调整堆 */
         i = heap_.size();
         ref_[id] = i;
-        heap_.push_back({id, Clock::now() + MS(timeout), cb});
         siftup_(i);
+        heap_.push_back({id, Clock::now() + MS(timeout), cb});
     } 
     else {
         /* 已有结点：调整堆 */
