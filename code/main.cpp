@@ -1,8 +1,4 @@
-/*
- * @Author       : mark
- * @Date         : 2020-06-18
- * @copyleft Apache 2.0
- */ 
+
 #include <unistd.h>
 #include "server/webserver.h"
 
